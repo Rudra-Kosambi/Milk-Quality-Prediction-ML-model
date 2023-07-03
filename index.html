@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Milk Quality Predictor</title>
+</head>
+<body>
+
+    <h1>Milk Quality Predictor</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+        <label>pH</label><br>
+        <input type="text" name="pH"><br><br>
+
+        <label>Temperature</label><br>
+        <input type="text" name="Temperature"><br><br>
+
+        <label>Taste</label><br>
+        <input type="text" name="Taste"><br><br>
+
+        <label>Odour</label><br>
+        <input type="text" name="Odor"><br><br>
+
+        <label>Fat</label><br>
+        <input type="text" name="Fat"><br><br>
+
+        <label>Turbidity</label><br>
+        <input type="text" name="Turbidity"><br><br>
+
+        <label>Colour</label><br>
+        <input type="text" name="Colour"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+</body>
+</html>
